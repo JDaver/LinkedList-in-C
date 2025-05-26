@@ -16,7 +16,8 @@ int main(){
 
     lista = InsertTail(lista,56);
     lista = InsertTail(lista,445);
-    lista = insertAfter(lista, 999,56);
+    lista = insertAfter(lista, 999,445);
+    lista = InsertBefore(lista, 55, 999);
     printLista(lista);
     return 0;
 }

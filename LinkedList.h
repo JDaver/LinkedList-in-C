@@ -15,4 +15,10 @@ Nodo* delNode(Nodo* head, int val);
  
 Nodo* insertAfter(Nodo* head, int newVal, int target);
 
+Nodo* RemoveHead(Nodo* head);
+
+Nodo* RemoveTail(Nodo* head);
+
+Nodo* InsertBefore(Nodo* head, int newVal, int target);
+
 #endif
