@@ -1,24 +1,32 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
-typedef struct Nodo{
+typedef struct Node{
     int val;
-    struct Nodo* next;
-}Nodo;
+    struct Node* next;
+}Node;
 
-void printLista(Nodo* head);
+void printList(Node* head);
 
-Nodo* InsertHead(Nodo* head, int val);
+void printLoopedList(Node* head,int size);
 
-Nodo* InsertTail (Nodo* head,int val);
+Node* InsertHead(Node* head, int val);
 
-Nodo* delNode(Nodo* head, int val);
+Node* InsertTail (Node* head,int val);
+
+Node* delNode(Node* head, int val);
  
-Nodo* insertAfter(Nodo* head, int newVal, int target);
+Node* insertAfter(Node* head, int newVal, int target);
 
-Nodo* RemoveHead(Nodo* head);
+Node* RemoveHead(Node* head);
 
-Nodo* RemoveTail(Nodo* head);
+Node* RemoveTail(Node* head);
 
-Nodo* InsertBefore(Nodo* head, int newVal, int target);
+Node* InsertBefore(Node* head, int newVal, int target);
+
+Node* reverseList(Node* head);
+
+int createLoop(Node* head);
+
+int createLoopAtValue(Node* head,int val);
 
 #endif
