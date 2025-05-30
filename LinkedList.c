@@ -1,4 +1,3 @@
-
 #include <stdlib.h>
 #include <stdio.h>
 #include "LinkedList.h"
@@ -214,4 +213,20 @@ int createLoopAtValue(Node* head,int val){
     head->next = firstElement;
     head = firstElement;
     return counter;
+}
+
+ void isLoop(Node* head){
+    Node * fast = head;
+    Node * slow = head;
+    
+    while(fast->next!=NULL && fast->next->next!= NULL){
+        slow = slow->next;
+        fast = fast->next->next;
+        if(slow == fast){
+            printf("This is a looped list.\n");
+            return;
+        }
+    }
+
+    printf("This is not a looped list.\n");
 }

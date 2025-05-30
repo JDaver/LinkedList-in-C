@@ -1,5 +1,6 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
+
 typedef struct Node{
     int val;
     struct Node* next;
@@ -29,4 +30,5 @@ int createLoop(Node* head);
 
 int createLoopAtValue(Node* head,int val);
 
+void isLoop(Node* head);
 #endif
